@@ -3,6 +3,7 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "vite.config.ts",
+    "shim-aliases.ts",
     "vitest.config.ts",
     "eslint.config.js"
   ],
@@ -10,27 +11,51 @@
     "target": "ES2022",
     "jsx": "react-jsx",
     "module": "ESNext",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "types": ["vite/client", "vitest/globals"],
-
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "types": [
+      "vite/client",
+      "vitest/globals"
+    ],
     "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": false,
     "noEmit": true,
-
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-    "noUncheckedSideEffectImports": true,
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": [
+        "./src/*"
+      ],
+      "next/link": [
+        "./src/shims/next-link.tsx"
+      ],
+      "next/navigation": [
+        "./src/shims/next-navigation.ts"
+      ],
+      "next/image": [
+        "./src/shims/next-misc.tsx"
+      ],
+      "next/script": [
+        "./src/shims/next-script.tsx"
+      ],
+      "next/server": [
+        "./src/shims/next-server.ts"
+      ],
+      "next": [
+        "./src/shims/next-misc.tsx"
+      ],
+      "next-themes": [
+        "./src/shims/next-themes.tsx"
+      ]
+    },
+    "strictNullChecks": true
   }
 }

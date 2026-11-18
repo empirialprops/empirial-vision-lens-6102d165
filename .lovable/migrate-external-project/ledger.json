@@ -1,0 +1,47 @@
+{
+  "source": "github:empirialprops/empirial-vision-lens",
+  "capabilities": [
+    {
+      "capability": "application code and assets",
+      "source": "GitHub repository",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "The repository was copied into the current project and the homepage returned HTTP 200 in the preview."
+    },
+    {
+      "capability": "database schema and records",
+      "source": "Drizzle schema and Firebase-related code; no record export attached",
+      "outcome": "migrate",
+      "status": "pending",
+      "next_action": "Existing data and database migration were intentionally not included; source data exports were not attached."
+    },
+    {
+      "capability": "authentication and identities",
+      "source": "Firebase-related code",
+      "outcome": "migrate",
+      "status": "pending",
+      "next_action": "External login was intentionally not configured; it is not required to display the homepage."
+    },
+    {
+      "capability": "external credentials",
+      "source": "FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY, DISCORD_CLIENT_ID, DISCORD_CLIENT_SECRET",
+      "outcome": "preserve",
+      "status": "pending",
+      "next_action": "Needed only for live Firebase/Discord features; no credentials were added."
+    },
+    {
+      "capability": "uploaded assets",
+      "source": "Public repository assets",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "Repository images and assets were copied and the homepage rendered in the preview."
+    },
+    {
+      "capability": "verification",
+      "source": "Imported application",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "The homepage returned HTTP 200, displayed the expected EMPIRIAL title and content, and reported no page errors."
+    }
+  ]
+}

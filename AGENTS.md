@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Imported application structure
+- Keep TanStack route files as the URL entry points and preserve the source app modules and Next.js compatibility shims; this lets the imported pages run on the existing TanStack preview without replacing its framework.
